@@ -103,20 +103,24 @@ class _HomescreenState extends State<Homescreen> {
                     keyboardType: TextInputType.phone,
                   ),
                   SizedBox(height: 16),
-                  _isLoading  ? Center(child: CircularProgressIndicator())
-                      : ElevatedButton(
-                    onPressed: _verifyNumber,
-                    child: Text("Vérifier"),
-                    style: ElevatedButton.styleFrom(
-                      foregroundColor: Colors.blue,
-                      backgroundColor: Colors.white,
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      elevation: 5, // Shadow effect
+                  Center(
+                    child: Container(
+                      child: _isLoading  ? Center(child: CircularProgressIndicator())
+                          : ElevatedButton(
+                        onPressed: _verifyNumber,
+                        child: Text("Vérifier"),
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.blue,
+                          backgroundColor: Colors.white,
+                          padding: EdgeInsets.symmetric(vertical: 16.0),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          elevation: 5, // Shadow effect
+                        ),
+                      ) ,
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
